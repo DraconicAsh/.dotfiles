@@ -1,5 +1,5 @@
 window {
-    background-image: url("file:///etc/greetd/bg.jpg");
+    background-image: url("file:///etc/greetd/backgrounds/bg.jpg");
     background-size: cover;
     background-position: center;
 }

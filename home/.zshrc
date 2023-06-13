@@ -23,7 +23,6 @@ bindkey -v
 # The following lines were copied from ~/.bashrc
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-#PS1='[\u@\h \W]\$ '
-# End of lines bopied from ~/.bashrc
+# End of lines copied from ~/.bashrc
 
 PS1='[%n@%M %~]$ '

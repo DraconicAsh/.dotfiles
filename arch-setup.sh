@@ -37,7 +37,7 @@ done
 # Clean leftover orphans from makedepends
 sudo pacman -Qtdg | pacman -Rns -
 
-# Creat hard links for greetd config
+# Setup greetd config
 /bin/bash ~/.dotfiles/setup-scripts/greetd-setup.sh
 
 # Make zsh default shell

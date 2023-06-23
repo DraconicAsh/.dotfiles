@@ -1,2 +1,3 @@
-default.target.wants
+dotconfig/systemd/user/*
+!dotconfig/systemd/user/ssh-agent.service
 *.pacsave

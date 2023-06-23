@@ -15,6 +15,9 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 # Set rustup to and download stable branch
 rustup default stable
 
+# Enable WirePLumber
+systemctl --user enable wireplumber.service
+
 # Enable services and acquire key for librewolf-bin
 sudo -s -- <<EOF
     systemctl enable NetworkManager.service

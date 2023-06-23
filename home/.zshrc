@@ -26,8 +26,15 @@ alias grep='grep --color=auto'
 # End of lines copied from ~/.bashrc
 
 #PS1='[%n@%M %~]$ '
+
+# Enable prompt theme "Pure"
 fpath+=(~/.zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure
 
+# Customize Pure
+PURE_PROMPT_SYMBOL=[%n@%M]$
+
+# Source zsh-syntax-highlighting 
+# MUST BE END OF FILE
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh

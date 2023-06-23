@@ -30,9 +30,13 @@ alias grep='grep --color=auto'
 # Enable prompt theme "Pure"
 fpath+=(~/.zsh/pure)
 autoload -U promptinit; promptinit
-prompt pure
 
 # Customize Pure
+zstyle :prompt:pure:path color green
+
+prompt pure
+
+# Customize Pure prompt
 PURE_PROMPT_SYMBOL=[%n@%M]$
 
 # Source zsh-syntax-highlighting 

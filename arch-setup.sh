@@ -4,7 +4,7 @@ SHDIR=~/.dotfiles/setup-scripts
 AUR=https://aur.archlinux.org
 
 # Update system and install packages for basic environment
-sudo pacman -Syu alsa-utils bemenu cage greetd gtk4 kitty neovim openssh pipewire pipewire-jack qt6-wayland river rustup ttf-hack-nerd ttf-ibm-plex waybar wayland wireplumber zsh zsh-completions
+sudo pacman -Syu alsa-utils bemenu cage greetd gtk4 kitty neovim openssh pipewire pipewire-jack qt6-wayland river rustup ttf-hack-nerd ttf-ibm-plex waybar wayland wireplumber zsh zsh-completions zsh-syntax-highlighting
 
 # Clone NvChad for Neovim config
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1

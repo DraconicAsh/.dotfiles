@@ -25,6 +25,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # End of lines copied from ~/.bashrc
 
-PS1='[%n@%M %~]$ '
+#PS1='[%n@%M %~]$ '
+fpath+=(~/.zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh

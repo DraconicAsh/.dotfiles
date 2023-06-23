@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Create cymbolic links for .config files
+# Create symbolic links for .config files
 for file in ~/.dotfiles/dotconfig/*; do
 	ln -sf $file ~/.config
 done
@@ -9,3 +9,6 @@ done
 for file in ~/.dotfiles/home/.*; do
 	ln -sf $file ~
 done
+
+# Create symbolic link for NvChad/Neovim config
+ln -sf ~/.dotfiles/nvim/custom ~/.config/nvim/lua

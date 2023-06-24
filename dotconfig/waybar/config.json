@@ -1,0 +1,53 @@
+{
+    "layer": "top",
+    "modules-left": ["river/tags"],
+    "modules-center": ["river/window"],
+    "modules-right": ["tray", "wireplumber", "cpu", "memory", "network", "battery", "clock"],
+    "river/tags": {
+        "num-tags": 9
+    },
+    "river/window": {
+        "max-length": 50
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "on-click": "helvum",
+        "format-icons": ["", "", ""]
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "{}% ",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "{used:0.1f}G/{total:0.1f}G "
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    }
+}

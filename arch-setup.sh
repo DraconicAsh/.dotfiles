@@ -55,5 +55,3 @@ chsh -s /bin/zsh
 
 # Launch nvim for initial setup
 nvim
-
-echo Run "systemctl --user enable --now ssh-agent" after reboot to enable ssh-agent

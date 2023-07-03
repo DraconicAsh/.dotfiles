@@ -4,7 +4,7 @@ SHDIR=~/.dotfiles/setup-scripts
 AUR=https://aur.archlinux.org
 
 # Update system and install packages for basic environment
-sudo pacman -Syu alsa-utils bemenu cage greetd gtk4 kitty neovim openssh pipewire pipewire-jack qt6-wayland river rustup ttf-hack-nerd ttf-ibm-plex ufw waybar wayland wget wireplumber zsh zsh-completions zsh-syntax-highlighting
+sudo pacman -Syu alsa-utils bemenu cage greetd gtk4 hyprland kitty neovim openssh pipewire pipewire-jack qt6-wayland rustup ttf-hack-nerd ttf-ibm-plex ufw waybar wayland wget wireplumber zsh zsh-completions zsh-syntax-highlighting
 
 # Clone NvChad for Neovim config
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
@@ -18,7 +18,7 @@ rustup default stable
 # Enable WirePLumber
 systemctl --user enable wireplumber.service
 
-# Enable services and acquire key for librewolf-bin
+# Enable services
 sudo -s -- <<EOF
     systemctl enable NetworkManager.service
     systemctl enable ufw.service
@@ -27,8 +27,10 @@ sudo -s -- <<EOF
     ufw default deny
     systemctl enable greetd.service
     systemctl enable systemd-timesyncd.service
-    gpg --keyserver hkp://keyserver.ubuntu.com --search-keys 662E3CDD6FE329002D0CA5BB40339DD82B12EF16
 EOF
+
+# Acquire key for librewolf-bin
+gpg --keyserver hkp://keyserver.ubuntu.com --search-keys 662E3CDD6FE329002D0CA5BB40339DD82B12EF16
 
 # Clone PKGBUILDs for packages needed from the User Repository
 mkdir ~/.build

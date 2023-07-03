@@ -1,12 +1,8 @@
 {
     "layer": "top",
-    "modules-left": ["river/tags"],
-    "modules-center": ["river/window"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["tray", "wireplumber", "cpu", "memory", "network", "battery", "clock"],
-    "river/tags": {
-        "num-tags": 9
-    },
-    "river/window": {
+    "hyprland/window": {
         "max-length": 50
     },
     "tray": {

@@ -1,7 +1,13 @@
 {
     "layer": "top",
+    "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["tray", "wireplumber", "cpu", "memory", "network", "battery", "clock"],
+    "wlr/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
     "hyprland/window": {
         "max-length": 50
     },

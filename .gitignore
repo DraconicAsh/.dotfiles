@@ -1,3 +1,4 @@
 dotconfig/systemd/user/*
 !dotconfig/systemd/user/ssh-agent.service
+dotconfig/hypr/monitors.conf
 *.pacsave

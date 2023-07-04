@@ -4,7 +4,16 @@ local plugins = {
         ensure_installed = {
             "bash",
             "rust",
+
+            -- webdev
+            "css",
+            "html",
+            "javascript",
+
+            -- data
             "json",
+            "toml",
+            "yaml",
 
             -- git
             "git_config",

@@ -37,7 +37,7 @@ mkdir ~/.build
 cd ~/.build
 git clone $AUR/greetd-gtkgreet-git.git
 git clone $AUR/librewolf-bin.git
-git clone $AUR/swww.git
+git clone $AUR/wpaperd.git
 git clone $AUR/font-awesome-5.git
 
 # Build and install packages

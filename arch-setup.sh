@@ -4,7 +4,7 @@ SHDIR=~/.dotfiles/setup-scripts
 AUR=https://aur.archlinux.org
 
 # Update system and install packages for basic environment
-sudo pacman -Syu alsa-utils bemenu cage greetd gtk4 hyprland kitty neovim openssh pipewire pipewire-jack qt6-wayland rustup ttf-hack-nerd ttf-ibm-plex ufw waybar wayland wget wireplumber zsh zsh-completions zsh-syntax-highlighting
+sudo pacman -Syu alsa-utils cage greetd gtk4 hyprland kitty neovim openssh pipewire pipewire-jack qt6-wayland rustup ttf-hack-nerd ttf-ibm-plex ufw waybar wayland wget wireplumber zsh zsh-completions zsh-syntax-highlighting
 
 # Clone NvChad for Neovim config
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
@@ -40,7 +40,7 @@ cd paru-bin
 makepkg -sirc
 
 # Use paru for AUR packages
-paru greetd-gtkgreet-git librewolf-bin ttf-font-awesome-5 wpaperd
+paru greetd-gtkgreet-git librewolf-bin tofi ttf-font-awesome-5 wpaperd
 # git clone $AUR/greetd-gtkgreet-git.git
 # git clone $AUR/librewolf-bin.git
 # git clone $AUR/wpaperd.git

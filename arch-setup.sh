@@ -32,25 +32,31 @@ EOF
 # Acquire key for librewolf-bin
 gpg --keyserver hkp://keyserver.ubuntu.com --search-keys 662E3CDD6FE329002D0CA5BB40339DD82B12EF16
 
-# Clone PKGBUILDs for packages needed from the User Repository
+# Clone and build AUR helper paru
 mkdir ~/.build
 cd ~/.build
-git clone $AUR/greetd-gtkgreet-git.git
-git clone $AUR/librewolf-bin.git
-git clone $AUR/wpaperd.git
-git clone $AUR/font-awesome-5.git
+git clone $AUR/paru-bin.git
+cd paru-bin
+makepkg -sirc
 
-# Build and install packages
-for pkg in ~/.build/*; do
-    cd $pkg
-    makepkg -sic
-done
-
-# Clean leftover orphans from makedepends
-sudo pacman -Qtdg | pacman -Rns -
-
-# Setup greetd config
-/bin/bash ~/.dotfiles/setup-scripts/greetd-setup.sh
+# Use paru for AUR packages
+paru greetd-gtkgreet-git librewolf-bin ttf-font-awesome-5 wpaperd
+# git clone $AUR/greetd-gtkgreet-git.git
+# git clone $AUR/librewolf-bin.git
+# git clone $AUR/wpaperd.git
+# git clone $AUR/font-awesome-5.git
+#
+# # Build and install packages
+# for pkg in ~/.build/*; do
+#     cd $pkg
+#     makepkg -sic
+# done
+#
+# # Clean leftover orphans from makedepends
+# sudo pacman -Qtdg | pacman -Rns -
+#
+# # Setup greetd config
+# /bin/bash ~/.dotfiles/setup-scripts/greetd-setup.sh
 
 # Make zsh default shell
 chsh -s /bin/zsh

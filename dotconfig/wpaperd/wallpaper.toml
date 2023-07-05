@@ -1,5 +1,5 @@
 [default]
 path = "~/.dotfiles/wallpapers"
-duration = "30m"
+duration = "15m"
 sorting = "random"
 apply-shadow = true

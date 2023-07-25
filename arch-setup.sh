@@ -40,7 +40,7 @@ cd paru-bin
 makepkg -sirc
 
 # Use paru for AUR packages
-paru greetd-gtkgreet-git librewolf-bin tofi ttf-font-awesome-5 wpaperd
+paru -S greetd-gtkgreet-git librewolf-bin tofi ttf-font-awesome-5 wpaperd
 # git clone $AUR/greetd-gtkgreet-git.git
 # git clone $AUR/librewolf-bin.git
 # git clone $AUR/wpaperd.git

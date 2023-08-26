@@ -4,7 +4,7 @@ SHDIR=~/.dotfiles/setup-scripts
 AUR=https://aur.archlinux.org
 
 # Update system and install packages for basic environment
-sudo pacman -Syu alsa-utils breeze-gtk greetd greetd-tuigreet gtk4 gvfs hyprland kitty mako neovim openssh pipewire pipewire-jack qt6-wayland rustup thunar thunar-volman ttf-hack-nerd ttf-ibm-plex udisks2 ufw waybar wayland wget wireplumber zsh zsh-completions zsh-syntax-highlighting
+sudo pacman -Syu alsa-utils breeze-gtk greetd greetd-tuigreet gtk4 gvfs hyprland kitty mako neovim openssh pipewire pipewire-jack pipewire-pulse qt6-wayland rustup thunar thunar-volman ttf-hack-nerd ttf-ibm-plex udisks2 ufw waybar wayland wget wireplumber zsh zsh-completions zsh-syntax-highlighting
 
 # Clone NvChad for Neovim config
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
@@ -15,8 +15,10 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 # Set rustup to and download stable branch
 rustup default stable
 
-# Enable WirePLumber
-systemctl --user enable wireplumber.service
+# Enable Pipewire Stuff
+systemctl --user enable --now pipewire.socket
+systemctl --user enable --now pipewire-pulse.socket
+systemctl --user enable --now wireplumber.service
 
 # Enable services
 sudo -s -- <<EOF

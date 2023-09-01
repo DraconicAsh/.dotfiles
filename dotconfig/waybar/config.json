@@ -1,5 +1,6 @@
 {
     "layer": "top",
+    "height": 50,
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["tray", "wireplumber", "cpu", "memory", "network", "battery", "clock"],

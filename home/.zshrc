@@ -24,6 +24,7 @@ bindkey -v
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # End of lines copied from ~/.bashrc
+alias lsblkc='lsblk -o name,mountpoint,label,size,fstype,uuid,partuuid'
 
 #PS1='[%n@%M %~]$ '
 

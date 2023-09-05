@@ -33,7 +33,7 @@ fpath+=(~/.zsh/pure)
 autoload -U promptinit; promptinit
 
 # Customize Pure
-zstyle :prompt:pure:path color green
+# zstyle :prompt:pure:path color green
 
 prompt pure
 

@@ -1,7 +1,7 @@
 ---@type ChadrcConfig 
 local M = {}
 M.ui = {
-    theme = 'nightowl',
+    theme = 'tokyonight',
     transparency = true,
     statusline = {
         theme = 'minimal',

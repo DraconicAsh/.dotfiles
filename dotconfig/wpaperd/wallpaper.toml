@@ -1,5 +1,5 @@
 [default]
-path = "~/.dotfiles/wallpapers"
+path = "~/.config/wpaperd/wallpapers"
 duration = "15m"
 sorting = "random"
 apply-shadow = true

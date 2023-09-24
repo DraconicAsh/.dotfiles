@@ -26,6 +26,30 @@ alias grep='grep --color=auto'
 # End of lines copied from ~/.bashrc
 alias lsblkc='lsblk -o name,mountpoint,label,size,fstype,uuid,partuuid'
 
+# Aliases for C projects
+cnew() {
+    DEFAULT_MESON="project('$1','c', version : '0.1')
+executable('$1','$1.c')"
+
+    mkdir $1
+    cd $1
+    touch $1.c meson.build
+    echo "$DEFAULT_MESON" > meson.build
+    meson setup build
+    #meson init --name $1 --build
+    git init
+}
+
+crelease() {
+    dir=release
+    if [ ! -d "$dir" ]; then
+        meson setup $dir --buildtype=release
+    fi
+    meson compile -C $dir
+}
+
+alias cbuild='meson compile -C build'
+
 #PS1='[%n@%M %~]$ '
 
 # Enable prompt theme "Pure"

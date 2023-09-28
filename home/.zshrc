@@ -25,15 +25,34 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # End of lines copied from ~/.bashrc
 alias lsblkc='lsblk -o name,mountpoint,label,size,fstype,uuid,partuuid'
+alias editrc="$EDITOR ~/.zshrc && source ~/.zshrc"
+
+dev() { cd ~/dev/$1 }
 
 # Aliases for C projects
+DEFAULT_C='#include <stdio.h>
+
+int main(){
+    printf("Hello, world!\\n");
+}'
+
+
+cfile() { echo $DEFAULT_C > $1.c }
+
 cnew() {
-    DEFAULT_MESON="project('$1','c', version : '0.1')
-executable('$1','$1.c')"
+    DEFAULT_MESON="project('$1', 'c', version : '0.1', default_options : ['warning_level=3'])
+
+sources = files([
+    'src/$1.c',
+])
+
+executable('$1', sources)"
 
     mkdir $1
     cd $1
-    touch $1.c meson.build
+    mkdir src
+    cfile src/$1
+    mkdir subprojects
     echo "$DEFAULT_MESON" > meson.build
     meson setup build
     #meson init --name $1 --build

@@ -6,6 +6,7 @@ local plugins = {
                 "bash",
                 "rust",
                 "c",
+                "verilog",
 
                 -- webdev
                 "css",

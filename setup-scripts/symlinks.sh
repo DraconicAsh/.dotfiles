@@ -9,6 +9,3 @@ done
 for file in ~/.dotfiles/home/.*; do
 	ln -sf $file ~
 done
-
-# Create symbolic link for NvChad/Neovim config
-ln -sf ~/.dotfiles/nvim/custom ~/.config/nvim/lua

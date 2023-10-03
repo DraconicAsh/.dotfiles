@@ -4,10 +4,10 @@ SHDIR=~/.dotfiles/setup-scripts
 AUR=https://aur.archlinux.org
 
 # Update system and install packages for basic environment
-sudo pacman -Syu alsa-utils breeze-gtk greetd greetd-tuigreet gtk4 gvfs hyprland kitty mako meson neovim ninja noto-fonts noto-fonts-emoji openssh pipewire pipewire-alsa pipewire-jack pipewire-pulse qt6-wayland reflector rustup thunar thunar-volman ttf-hack-nerd udisks2 ufw waybar wayland wget wireplumber wl-clipboard xdg-desktop-portal-hyprland zsh zsh-completions zsh-syntax-highlighting
+sudo pacman -Syu alsa-utils breeze-gtk greetd greetd-tuigreet gtk4 gvfs hyprland kitty mako meson neovim ninja noto-fonts noto-fonts-emoji openssh pipewire pipewire-alsa pipewire-jack pipewire-pulse qt6-wayland reflector ripgrep rustup thunar thunar-volman ttf-hack-nerd udisks2 ufw waybar wayland wget wireplumber wl-clipboard xdg-desktop-portal-hyprland zsh zsh-completions zsh-syntax-highlighting
 
-# Clone NvChad for Neovim config
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+# Clone Neovim config and run initial setup
+/bin/bash ~/.dotfiles/setup-scripts/neovim.sh
 
 # Creat symlinks for configs
 /bin/bash ~/.dotfiles/setup-scripts/symlinks.sh
@@ -62,6 +62,3 @@ paru -S librewolf-bin tofi ttf-font-awesome-5 wpaperd
 
 # Make zsh default shell
 chsh -s /bin/zsh
-
-# Launch nvim for initial setup
-nvim

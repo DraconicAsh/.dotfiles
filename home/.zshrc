@@ -27,6 +27,8 @@ alias grep='grep --color=auto'
 alias lsblkc='lsblk -o name,mountpoint,label,size,fstype,uuid,partuuid'
 alias editrc="$EDITOR ~/.zshrc && source ~/.zshrc"
 
+alias :q='exit' # You're Welcome
+
 dev() { cd ~/dev/$1 }
 
 # Aliases for C projects
@@ -86,3 +88,5 @@ PURE_PROMPT_SYMBOL=[%n@%M]$
 # Source zsh-syntax-highlighting 
 # MUST BE END OF FILE
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+[ -f "/home/ash/.ghcup/env" ] && source "/home/ash/.ghcup/env" # ghcup-env

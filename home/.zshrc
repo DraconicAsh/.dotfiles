@@ -29,8 +29,6 @@ alias editrc="$EDITOR ~/.zshrc && source ~/.zshrc"
 
 alias :q='exit' # You're Welcome
 
-dev() { cd ~/dev/$1 }
-
 # Aliases for C projects
 DEFAULT_C='#include <stdio.h>
 
@@ -70,6 +68,9 @@ crelease() {
 }
 
 alias cbuild='meson compile -C build'
+
+# Source local file for machine specific options
+source ~/.zsh-localrc
 
 #PS1='[%n@%M %~]$ '
 
